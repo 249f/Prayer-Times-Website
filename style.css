@@ -9,7 +9,7 @@ body{
 }
 .hero{
     /* background-color: black; */
-    height: 110vh;
+    height: 100vh;
     background-image: url("img/hero/photo-1.jpg");
     background-size: cover;
     background-position: center;
@@ -24,10 +24,10 @@ body{
     content: "";
     background: linear-gradient(transparent,rgba(0, 0, 0, 0.521),black);
     /* height: 250px; */
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     position: absolute;
-    bottom: -10vh;
+    bottom: 0;
 }
 .hero .hero-text{
     font-size: 5vh;
