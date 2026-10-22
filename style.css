@@ -9,7 +9,7 @@ body{
 }
 .hero{
     /* background-color: black; */
-    height: 100vh;
+    height: 110vh;
     background-image: url("img/hero/photo-1.jpg");
     background-size: cover;
     background-position: center;
@@ -24,10 +24,10 @@ body{
     content: "";
     background: linear-gradient(transparent,rgba(0, 0, 0, 0.521),black);
     /* height: 250px; */
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: -10vh;
 }
 .hero .hero-text{
     font-size: 5vh;
@@ -82,12 +82,62 @@ body{
 
 }
 #times-cards div{
-    border: 3px solid rgba(233, 115, 5, 0.822);
-    width: fit-content;
+    border: 3px solid rgba(27, 27, 27, 0.822);
+    min-width: fit-content;
+    width: 120px;
     font-size: 3vh;
     padding: 30px;
     font-family: "amiri";
     border-radius: 25px;
-    background: linear-gradient(transparent,rgba(233, 115, 5, 0.404));
+    background: linear-gradient(340deg,transparent,rgba(50, 50, 50, 0.404));
 }
-
+.nowh1{
+    text-align: center;
+    margin-top: 60px;
+    font-family: "amiri";
+    font-size: 4vh;
+    color: rgb(233, 134, 5) ;
+      
+}
+#underline{
+    height: 5px;
+    width: 130px;
+    background:linear-gradient(to left,rgb(233, 134, 5),rgb(255, 102, 0)) ;
+    margin: auto; 
+    margin-top: 10px;
+    border-radius: 2px;
+}
+.cites-holder{
+    margin-top: 30px;
+}
+.cites {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cites div img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    
+}
+.cites div{
+    background: linear-gradient(340deg,rgb(0, 0, 0), rgb(14, 14, 14));
+    width: fit-content;
+    padding: 20px;
+    border-radius: 15px;
+    border: 3px solid rgba(27, 27, 27, 0.822);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.cites div:hover{
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.253);
+    transition: 0.5s;
+}
+.cites h2{
+    margin: 20px 15px ;
+    font-size: 3vh;
+    font-family: "amiri";
+}

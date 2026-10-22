@@ -4,7 +4,7 @@ let dhuhr = document.getElementById("dhuhr")
 let asr = document.getElementById("asr")
 let maghrib = document.getElementById("maghrib")
 let isha = document.getElementById("isha")
-
+let htmlnow = document.getElementById("html-now")
 // get device local date
 
 let deviceDate = new Date()
@@ -14,12 +14,13 @@ let options = {
     year: "numeric"
 };
  let now = deviceDate.toLocaleDateString("en-GB",options).replace(/\//g,"-")
- console.log(now);
 
 // #### get device local date
 
-function getTimes(){
-    axios.get(`https://api.aladhan.com/v1/timingsByCity/${now}?city=Khartoum&country=SD`)
+htmlnow.innerHTML = now
+
+function getTimes(city,code){
+    axios.get(`https://api.aladhan.com/v1/timingsByCity/${now}?city=${city}&country=${code}`)
     .then(response => {
         let times = response.data.data.timings
 
@@ -35,6 +36,6 @@ function getTimes(){
     })
 
 }
-getTimes()
+getTimes("Khartoum","SD")
 
 
