@@ -17,8 +17,9 @@ body{
 }
 .hero::after{
     content: "";
-    background: linear-gradient(transparent,black);
-    height: 250px;
+    background: linear-gradient(transparent,rgba(0, 0, 0, 0.521),black);
+    /* height: 250px; */
+    height: 90vh;
     width: 100%;
     position: absolute;
     bottom: 0;
