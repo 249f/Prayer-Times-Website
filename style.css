@@ -30,24 +30,28 @@ body{
     bottom: 0;
 }
 .hero .hero-text{
-    font-size: 50px;
+    font-size: 5vh;
     /* text-align: center; */
     width: 67%;
     z-index: 100;
     padding-right: 5%;
+    font-family: "Amiri" ;
+    font-weight: 200;
 }
 .hero .hero-text p {
     font-size: 25px;
     padding-right: 30%;
+
 }
 .hero .hero-btn{
     width: 33%;
     z-index: 100;
+    
 }
 .hero .hero-btn button{
     background: linear-gradient(30deg,rgb(255, 153, 0), rgb(233, 115, 5));
     border: none;
-    font-size: 50px;
+    font-size: 5vh;
     font-weight: 600;
     color: white;
     padding: 20px 50px;
@@ -58,6 +62,16 @@ body{
 .hero .hero-btn button:hover{
     box-shadow: 0px 0px 50px rgba(255, 174, 0, 0.719);
     transition: 0.5s;
+}
+.content{
+    padding: 30px 30px;
+}
+.content h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.content p {
+    font-size: 25px;
 }
 
 
