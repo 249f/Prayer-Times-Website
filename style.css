@@ -66,12 +66,28 @@ body{
 .content{
     padding: 30px 30px;
 }
-.content h1{
+.head-text h1{
     font-size: 40px;
     margin-bottom: 20px;
 }
-.content p {
+.head-text p {
     font-size: 25px;
 }
 
+#times-cards{
+    padding: 60px 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+}
+#times-cards div{
+    border: 3px solid rgba(233, 115, 5, 0.822);
+    width: fit-content;
+    font-size: 3vh;
+    padding: 30px;
+    font-family: "amiri";
+    border-radius: 25px;
+    background: linear-gradient(transparent,rgba(233, 115, 5, 0.404));
+}
 
