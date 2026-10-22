@@ -41,6 +41,7 @@
       </div>
       <h1 class="nowh1">مواقيت اليوم <span id="html-now"></span></h1>
       <div id="underline"></div>
+      <div id="current-city">الخرطوم</div>
       <div id="times-cards">
         <div>
             <h3>الصبح :</h3>
@@ -73,18 +74,45 @@
         <h1>قائمة المدن المتاحة : </h1>
     </div>
       <div class="cites">
-        <div onclick="getTimes('Khartoum','SD')">
+        <div onclick="getTimes('Khartoum','SD','الخرطوم')">
             <div id="img-wrapper">
             <img src="https://upload.wikimedia.org/wikipedia/en/3/31/Hotel_in_Khartoum_%282007%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="khartoum image">
             </div>
-            <h2>الخرطوم</h2>
+            <h2>السودان - الخرطوم</h2>
         </div>
-        <div onclick="getTimes('Cairo','EG')">
+
+        <div onclick="getTimes('Cairo','EG','القاهرة')">
             <div id="img-wrapper">
                 <img src="https://orionmagazine.org/wp-content/uploads/2015/09/8589130570139-dusk-camel-pyramids-cairo-egypt-top-travel-lists-wallpaper-hd.jpg" alt="Cairo image">
             </div>
-            <h2>القاهرة</h2>
+            <h2>مصر - القاهرة</h2>
         </div>
+        
+        <div onclick="getTimes('Makkah','SA','مكة المكرمة')">
+            <div id="img-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3S57DfIzbCYjo046FlXlzB7Vp1iPmihoTOIknJb4_HA&s=10" alt="Makkah image">
+            </div>
+            <h2>المملكة العربية السعودية - مكة المكرمة</h2>
+        </div>
+        
+        <div onclick="getTimes('Doha','QA','الدوحة')">
+            <div id="img-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZi9gFXMB0bGIQdXuOpyUoacApQPANGumiKlhLdX3sNGyjMQGSGDETvZI&s=10" alt="Doha image">
+            </div>
+            <h2>قطر - الدوحة</h2>
+        </div>
+        
+        <div onclick="getTimes('Tirana','AL','تيرانا')">
+            <div id="img-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmlGVfTmpzjMRnBWFXnkocGOeVzMYMtAoF5odaGWW1QQ&s=10" alt="Tirana image">
+            </div>
+            <h2>البانيا - تيرانا</h2>
+        </div>
+        
+        
+
+
+
       </div>
 
     </div>

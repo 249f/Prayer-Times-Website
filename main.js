@@ -5,6 +5,7 @@ let asr = document.getElementById("asr")
 let maghrib = document.getElementById("maghrib")
 let isha = document.getElementById("isha")
 let htmlnow = document.getElementById("html-now")
+let currentCityTitle = document.getElementById("current-city")
 // get device local date
 
 let deviceDate = new Date()
@@ -19,7 +20,7 @@ let options = {
 
 htmlnow.innerHTML = now
 
-function getTimes(city,code){
+function getTimes(city,code,arCity){
     axios.get(`https://api.aladhan.com/v1/timingsByCity/${now}?city=${city}&country=${code}`)
     .then(response => {
         let times = response.data.data.timings
@@ -31,11 +32,12 @@ function getTimes(city,code){
         asr.innerHTML = times.Asr
         maghrib.innerHTML = times.Maghrib
         isha.innerHTML = times.Isha
+        currentCityTitle.innerHTML = arCity
         // ## update html cards
         
     })
 
 }
-getTimes("Khartoum","SD")
+getTimes("Khartoum","SD","الخرطوم")
 
 
