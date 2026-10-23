@@ -8,6 +8,8 @@ let htmlnow = document.getElementById("html-now")
 let currentCityTitle = document.getElementById("current-city")
 let heroButton = document.getElementById("hero-main-btn")
 let daySpan = document.getElementById("daySpan")
+let citesHolder = document.getElementById("cites")
+
 
 
 // get device local date
@@ -68,3 +70,53 @@ onload = () => {
         behavior: "smooth"
     })
 }
+
+let Cities = [
+{ 
+    arabicName : "السودان - الخرطوم",
+    englishName : "Khartoum",
+    country : "SD",
+    imgLink : "https://upload.wikimedia.org/wikipedia/en/3/31/Hotel_in_Khartoum_%282007%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"
+},
+{ 
+    arabicName : "مصر - القاهرة",
+    englishName : "Cairo",
+    country : "EG",
+    imgLink : "https://orionmagazine.org/wp-content/uploads/2015/09/8589130570139-dusk-camel-pyramids-cairo-egypt-top-travel-lists-wallpaper-hd.jpg"
+},
+{ 
+    arabicName : "المملكة العربية السعودية - مكة المكرمة",
+    englishName : "Makkah",
+    country : "SA",
+    imgLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3S57DfIzbCYjo046FlXlzB7Vp1iPmihoTOIknJb4_HA&s=10"
+},
+{ 
+    arabicName : "قطر - الدوحة",
+    englishName : "Doha",
+    country : "QA",
+    imgLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZi9gFXMB0bGIQdXuOpyUoacApQPANGumiKlhLdX3sNGyjMQGSGDETvZI&s=10"
+},
+{ 
+    arabicName : "ألبانيا - تيرانا",
+    englishName : "Tirana",
+    country : "AL",
+    imgLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmlGVfTmpzjMRnBWFXnkocGOeVzMYMtAoF5odaGWW1QQ&s=10"
+},
+
+]
+function fillCitesDiv(){
+    let content = ``
+    for (city of Cities){
+        content += `
+            <div onclick="getTimes('${city.englishName}','${city.country}','${city.arabicName}')">
+            <div id="img-wrapper">
+            <img src="${city.imgLink}" alt="${city.englishName} image">
+            </div>
+            <h2>${city.arabicName}</h2>
+        </div>
+        `
+    }
+    citesHolder.innerHTML = content
+  
+}
+fillCitesDiv()
