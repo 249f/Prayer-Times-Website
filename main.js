@@ -6,6 +6,9 @@ let maghrib = document.getElementById("maghrib")
 let isha = document.getElementById("isha")
 let htmlnow = document.getElementById("html-now")
 let currentCityTitle = document.getElementById("current-city")
+let heroButton = document.getElementById("hero-main-btn")
+
+
 // get device local date
 
 let deviceDate = new Date()
@@ -36,8 +39,32 @@ function getTimes(city,code,arCity){
         // ## update html cards
         
     })
+    scrollToTimes()
+}
+
+// scroll to the times cards
+function scrollToTimes(){
+scroll({
+    top: 1200,
+    behavior: "smooth"
+})
 
 }
-getTimes("Khartoum","SD","الخرطوم")
+
+heroButton.onclick = () => {
+    scrollToTimes()
+}
+
+onload = () => {
+    // get times for default city which is Khartoum
+    getTimes("Khartoum","SD","الخرطوم")
+
+    // scroll to the top of the page when reload
+    scroll({
+        top : 0,
+        behavior: "smooth"
+    })
+}
+
 
 
