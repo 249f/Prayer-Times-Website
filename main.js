@@ -7,6 +7,7 @@ let isha = document.getElementById("isha")
 let htmlnow = document.getElementById("html-now")
 let currentCityTitle = document.getElementById("current-city")
 let heroButton = document.getElementById("hero-main-btn")
+let daySpan = document.getElementById("daySpan")
 
 
 // get device local date
@@ -27,7 +28,8 @@ function getTimes(city,code,arCity){
     axios.get(`https://api.aladhan.com/v1/timingsByCity/${now}?city=${city}&country=${code}`)
     .then(response => {
         let times = response.data.data.timings
-
+        let day = response.data.data.date.hijri.weekday.ar
+        
         // update html cards
         fajr.innerHTML = times.Fajr
         shrook.innerHTML = times.Sunrise
@@ -36,6 +38,7 @@ function getTimes(city,code,arCity){
         maghrib.innerHTML = times.Maghrib
         isha.innerHTML = times.Isha
         currentCityTitle.innerHTML = arCity
+        daySpan.innerHTML = day
         // ## update html cards
         
     })
@@ -65,6 +68,3 @@ onload = () => {
         behavior: "smooth"
     })
 }
-
-
-
